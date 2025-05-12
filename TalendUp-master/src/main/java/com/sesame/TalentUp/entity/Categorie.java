@@ -1,0 +1,11 @@
+package com.sesame.TalentUp.entity;
+
+public enum Categorie {
+    PROGRAMMATION,
+    LEADERSHIP_MANAGEMENT,
+    GESTION_DE_PROJET,
+    MARKETING_VENTE,
+    INFORMATIQUE_RESEAUX,
+    RESSOURCES_HUMAINES,
+    DEVELOPPEMENT_PERSONNEL
+}
