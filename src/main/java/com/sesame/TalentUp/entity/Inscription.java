@@ -18,7 +18,8 @@ public class Inscription  implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
     private Date dateInscription ;
-    @OneToOne(mappedBy = "inscription")
+    private double progression; // de 0.0 à 100.0
+    @OneToOne
     Formation formation ;
     @ManyToOne
     Employee employer;

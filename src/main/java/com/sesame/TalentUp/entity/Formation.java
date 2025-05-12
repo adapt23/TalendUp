@@ -25,7 +25,7 @@ public class Formation  implements Serializable {
     private Categorie categorie ;
     @OneToOne(mappedBy = "formation")
     Competence competence ;
-    @OneToOne
+    @OneToOne(mappedBy = "formation")
     Inscription inscription ;
     @OneToOne
     Certification certification ;
