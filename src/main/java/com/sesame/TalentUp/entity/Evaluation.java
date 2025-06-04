@@ -1,5 +1,6 @@
 package com.sesame.TalentUp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +20,10 @@ public class Evaluation  implements Serializable {
     private int id ;
     private int score ;
     private String commentaire ;
+    @JsonIgnore
     @ManyToOne
     Formation formation ;
+    @JsonIgnore
     @ManyToOne
     Employee employer;
 }

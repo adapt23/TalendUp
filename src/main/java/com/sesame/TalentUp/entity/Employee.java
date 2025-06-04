@@ -22,7 +22,9 @@ public class Employee  implements Serializable {
     private String prenom ;
     private String email ;
     private String password ;
+    private String Telephone ;
     private int code ;
+
     @OneToMany (mappedBy = "employer")
     List<Evaluation> evaluations;
     @OneToMany(mappedBy = "employer")
