@@ -31,7 +31,7 @@ public class Employee  implements Serializable {
     List<Certification> certifications;
     @OneToMany(mappedBy = "employer")
     List<Inscription> inscriptions;
-    @OneToMany(mappedBy = "employer")
+    @ManyToMany
     List<Competence> competences;
 
 }

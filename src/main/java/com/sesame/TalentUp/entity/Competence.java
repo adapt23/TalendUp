@@ -7,13 +7,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Competence implements Serializable {
+//todo: spring boot, java
+public class   Competence implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
@@ -21,9 +23,10 @@ public class Competence implements Serializable {
     private String description  ;
     @Enumerated(EnumType.STRING)
     private Niveau niveau ;
+    @Enumerated(EnumType.STRING)
+    private Langue langue ;
     @OneToOne
     Formation formation ;
-    @ManyToOne
-    Employee employer;
-
+    @ManyToMany(mappedBy = "competences")
+    List<Employee> employeeList;
 }

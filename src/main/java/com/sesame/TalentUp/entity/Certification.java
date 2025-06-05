@@ -17,11 +17,11 @@ import java.util.Date;
 public class Certification implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  int id ;
-    private String nom ;
-    private Date dateObtention ;
-    @OneToOne(mappedBy = "certification")
-    Formation formation ;
+    private int id;
+    private String nom;
+    private Date dateObtention;
+    @ManyToOne
+    Formation formation;
     @ManyToOne
     Employee employer;
 

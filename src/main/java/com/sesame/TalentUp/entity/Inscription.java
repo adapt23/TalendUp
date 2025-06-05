@@ -19,8 +19,8 @@ public class Inscription  implements Serializable {
     private int id ;
     private Date dateInscription ;
     private double progression; // de 0.0 à 100.0
-    @OneToOne
-    Formation formation ;
+    @ManyToOne
+    Formation formation;
     @ManyToOne
     Employee employer;
 
