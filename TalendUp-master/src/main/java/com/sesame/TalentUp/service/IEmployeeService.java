@@ -13,7 +13,7 @@ public interface IEmployeeService {
     List<Inscription> getEmployeeInscriptions(int id);
     List<Employee> getAllEmployees();
     void deleteEmployee(int id);
-    public Employee registerEmployeeWithCompetences(Employee employee);
+    Employee registerEmployeeWithCompetences(Employee employee);
     Employee login(String email, String password);
     long getTotalEmployees();
 }
