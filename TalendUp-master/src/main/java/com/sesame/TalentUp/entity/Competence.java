@@ -1,5 +1,6 @@
 package com.sesame.TalentUp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,10 +22,13 @@ public class Competence implements Serializable {
     private String description  ;
     @Enumerated(EnumType.STRING)
     private Niveau niveau ;
+    @Enumerated(EnumType.STRING)
+    private Language Language ;
     @OneToOne
     Formation formation ;
     @ManyToOne
-    @JoinColumn(name = "employer_id")
+    @JsonIgnore
+    @JoinColumn(name = "employer_id", nullable = false)  // ← Très important
     private Employee employer;
 
 

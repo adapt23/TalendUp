@@ -1,5 +1,6 @@
 package com.sesame.TalentUp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,11 +23,13 @@ public class Employee  implements Serializable {
     private String nom ;
     private String prenom ;
     private String email ;
+    private String telephone ;
     private String password ;
     private int code ;
     // Relations
     @OneToMany(mappedBy = "employer", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Competence> competences = new ArrayList<>();;
+    private List<Competence> competences = new ArrayList<>();
+
 
     @OneToMany(mappedBy = "employer")
     private List<Certification> certifications;

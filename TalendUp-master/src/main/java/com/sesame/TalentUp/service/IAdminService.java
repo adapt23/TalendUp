@@ -12,4 +12,7 @@ public interface IAdminService {
     Admin getAdminById(int id);
     List<Admin> getAllAdmins();
     void deleteAdmin(int id);
+    Admin login(String email, String password);
+    long getTotalEmployees();
+    boolean isAdmin(int userId);
 }

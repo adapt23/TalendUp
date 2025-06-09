@@ -14,5 +14,6 @@ public interface IEmployeeService {
     List<Employee> getAllEmployees();
     void deleteEmployee(int id);
     public Employee registerEmployeeWithCompetences(Employee employee);
-
+    Employee login(String email, String password);
+    long getTotalEmployees();
 }
